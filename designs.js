@@ -3,6 +3,8 @@ const colorPicker = $('#colorPicker');
 // Select size input
 const heightInput = $('#input_height');
 const widthInput = $('#input_width');
+//select size picker
+const sizePicker = $('#sizePicker');
 //selected color
 let color = colorPicker.val();
 
@@ -12,7 +14,7 @@ colorPicker.on('change', function() {
 });
 
 // When size is submitted by the user, call makeGrid()
-$('#sizePicker').find('input[type="submit"]').on('click', function(event) {
+sizePicker.on('submit', function(event) {
   event.preventDefault();
   //get new height and width
   const height = heightInput.val();
